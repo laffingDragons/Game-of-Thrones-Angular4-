@@ -1,0 +1,96 @@
+<div class="container-fluid" style="text-align:center">
+    <div class="row" style="text-align:center" *ngIf="allData.length">
+        <div class="row">
+            <div class="col-md-12" style="font-size:22px">
+                <h4 class="pull-left" style="color: grey">Search By: </h4><input class="search pull-left" type="text" [(ngModel)]="filter" name="search" placeholder="Name,Alias,House,Region">
+
+                <button type="button" class="btn btn-default btn-md pull-right" (click)="sort('name')">Sort By : Name
+                    <span class="glyphicon sort-icon" *ngIf="key =='name'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                </button>
+            </div>
+            <br>
+            <hr>
+            <div class="row">
+                <form #createBlogForm="ngForm" (ngSubmit)="refresh()">
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <h4>No. of Characters</h4>
+                        <p> max value 2138</p>
+                        <input type="number" [(ngModel)]="m" #title="ngModel" name="m" min="1" max="2138">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <h4>No. of Books</h4>
+                        <p>max value 12</p>
+                        <input type="number" [(ngModel)]="n" #title="ngModel" name="n" min="1" max="12">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <h4>No. of Houses</h4>
+                        <p>max vlaue 444</p>
+                        <input type="number" [(ngModel)]="o" #title="ngModel" name="o" min="1" max="444">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <h4>Submit</h4>
+                        <p>.</p>
+                        <input class="btn btn-default" type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br><br><br><br>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+    <div class="sk-folding-cube" *ngIf="!allData.length">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- for Characters -->
+            <div *ngIf="allData.length>0">
+                <div *ngFor="let data of allData | filter :filter | orderBy: key : reverse | paginate: { itemsPerPage: 50, currentPage: p }">
+                    <div [routerLink]="['/view',data.url]">
+                        <div class="col-sm-6 col-md-6 col-lg-4">
+
+                            <div *ngIf="this.characButton">
+                                <div class="card chracs" style="min-height: 180px" *ngIf="data.gender">
+                                    <img src="../../assets/img/characIcon.png" alt="Icon" width="50px" height="50px"><br><br>
+                                    <div *ngIf="data.aliases[0]">Aliases : <span *ngFor="let aliase of data.aliases; let first=first; let last=last">{{ first ? aliase :''}}</span></div>
+                                    <div>
+                                        <h3 *ngIf="data.name">{{ data.name }}</h3>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div *ngIf="this.bookButton">
+                                <div class="card books" style="min-height: 180px" *ngIf="data.isbn">
+                                    <img src="../../assets/img/bookIcon.jpg" alt="Icon" width="50px" height="40px"><br><br>
+                                    <div>
+                                        <h3>{{ data.name }}</h3>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div *ngIf="this.houseButton">
+                                <div class="card houses" style="min-height: 180px" *ngIf="data.region">
+                                    <img src="../../assets/img/houseIcon.png" alt="Icon" width="40px" height="50px"><br><br>
+                                    <div>
+                                        <h3>{{ data.name }}</h3>
+                                        <p>{{data.region}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br/>
+            </div>
+        </div>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+</div>

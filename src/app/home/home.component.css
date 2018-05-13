@@ -1,0 +1,342 @@
+/* .chracs {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 4%;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(90, 90, 90, 1);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font: normal 16px/1 "Times New Roman", Times, serif;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: #2C2B33;
+    -webkit-box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.books {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 4%;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(90, 90, 90, 1);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font: normal 16px/1 "Times New Roman", Times, serif;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: #6B1A28;
+    -webkit-box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.housess {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin: 4%;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(90, 90, 90, 1);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font: normal 16px/1 "Times New Roman", Times, serif;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: #ABB7B7;
+    -webkit-box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+} */
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 220px;
+    margin: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.houses {
+    border-top: 5px solid #ABB7B7;
+    margin: 4%;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.houses:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.books {
+    border-top: 5px solid #6B1A28;
+    margin: 4%;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.books:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.chracs {
+    border-top: 5px solid #2C2B33;
+    margin: 4%;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.chracs:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+/* styling for search */
+
+.search {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: none;
+    z-index: auto;
+    width: 200px;
+    height: 42px;
+    position: static;
+    cursor: pointer;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    border: none;
+    -webkit-border-radius: 21px;
+    border-radius: 21px;
+    font: normal 20px/normal "Antic", Helvetica, sans-serif;
+    color: rgba(140, 140, 140, 1);
+    text-decoration: normal;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: rgba(40, 40, 40, 0.4);
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
+    text-shadow: none;
+    -webkit-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -moz-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -o-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+}
+
+.search:hover {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: none;
+    z-index: auto;
+    width: 200px;
+    height: 42px;
+    position: static;
+    cursor: pointer;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    border: none;
+    -webkit-border-radius: 21px;
+    border-radius: 21px;
+    font: normal 20px/normal "Antic", Helvetica, sans-serif;
+    color: rgba(181, 181, 181, 1);
+    text-decoration: normal;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
+    text-shadow: none;
+    -webkit-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -moz-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -o-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+}
+
+.search:focus {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: none;
+    z-index: auto;
+    width: 300px;
+    height: 42px;
+    position: static;
+    cursor: default;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: -13px 20px 0;
+    overflow: hidden;
+    border: none;
+    -webkit-border-radius: 21px;
+    border-radius: 21px;
+    font: normal 20px/normal "Antic", Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 1);
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5) inset;
+    text-shadow: none;
+    -webkit-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -moz-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -o-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+}
+
+
+/* style for spinner */
+
+.sk-folding-cube {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.sk-folding-cube .sk-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+    animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+.sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg);
+}
+
+.sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    transform: scale(1.1) rotateZ(180deg);
+}
+
+.sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    transform: scale(1.1) rotateZ(270deg);
+}
+
+.sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+@-webkit-keyframes sk-foldCubeAngle {
+    0%,
+    10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%,
+    75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%,
+    100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+@keyframes sk-foldCubeAngle {
+    0%,
+    10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%,
+    75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%,
+    100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+    }
+}

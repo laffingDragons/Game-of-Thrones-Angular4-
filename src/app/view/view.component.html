@@ -1,0 +1,91 @@
+<div *ngIf='info.isbn' class="background2">
+    <div class="container">
+        <div class="row">
+            <br><br><br><br>
+            <div class="col-lg-12">
+                <div class="card houses">
+
+                    <h1>{{info.name}}</h1>
+                    <hr/>
+
+                    <div class="bookDiv">
+                        <h4 *ngFor="let data of info.authors"><strong>Author</strong> : {{ data }}</h4>
+                        <h4><strong>Country</strong> : {{ info.country }}</h4>
+                        <h4><strong>Pages</strong> : {{ info.numberOfPages }}</h4>
+                        <h4><strong>Publisher</strong> : {{ info.publisher }}</h4>
+                        <h4><strong>Released on</strong> : {{ info.released | date }}</h4>
+                    </div>
+
+                </div>
+                <div class="col-xs-12" style="display: flex;justify-content: center;margin: 10px 0px;">
+                    <a class=" btn btn-default" style="display: inline-block;" (click)="goBackToPreviousPage()">Home</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div *ngIf='info.region'>
+    <div class="container">
+        <div class="row">
+            <br><br><br><br>
+
+            <div class="col-lg-12">
+                <div class="card houses">
+
+                    <h1>{{info.name}}</h1>
+                    <hr/>
+
+                    <div class="houseDiv">
+
+                        <h4 *ngIf='info.region'><strong>Region</strong> : {{ info.region }}</h4>
+                        <h4 *ngIf='info.seats[0]'><strong>Seats</strong> : {{ info.seats[0] }}</h4>
+                        <h4 *ngIf='info.titles[0]'><strong>Titles</strong> : <span *ngFor="let title of info.titles; let first=first; let last=last"></span> {{ title }}{{ last ? '':', '}}</h4>
+                        <h4 *ngIf='info.founded'><strong>Founded</strong> : {{ info.founded }}</h4>
+                        <p *ngIf='info.words'> <strong>Words</strong>: {{ info.words }}</p>
+                        <p *ngIf='info.coatOfArms'><strong>Coat Of Arms</strong> : "{{ info.coatOfArms }}"</p>
+                    </div>
+
+                </div>
+                <div class="col-xs-12" style="display: flex;justify-content: center;margin: 10px 0px;">
+                    <a class=" btn btn-default" style="display: inline-block;" (click)="goBackToPreviousPage()">Home</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div *ngIf='info.gender' class="background3">
+    <div class="container">
+        <div class="row">
+            <br><br><br><br>
+
+            <div class="col-lg-12">
+                <div class="card houses">
+
+                    <h1>{{info.name}}</h1>
+                    <hr/>
+
+                    <div class="chracDiv">
+                        <h4 *ngIf='info.aliases[0]'><strong>Known as</strong><br/> <span *ngFor="let aliase of info.aliases ; let first=first; let last=last">{{ aliase }}{{ last ? '':', '}}</span></h4>
+                        <h4 *ngIf='info.gender'><strong>Gender</strong> : {{ info.gender }}</h4>
+                        <h4 *ngIf='info.born'><strong> Born </strong>: {{ info.born }}</h4>
+                        <h4 *ngIf='info.culture'><strong>Culture</strong> : {{ info.culture }}</h4>
+                        <h4 *ngIf='info.died'><strong>Died </strong>: {{ info.died }}</h4>
+                        <h4 *ngIf='info.playedBy[0]'><strong>Played by</strong> : "{{ info.playedBy[0] }}"</h4>
+                        <h4 *ngIf='info.titles[0]'><strong>Title</strong> : "{{ info.titles[0]}}"</h4>
+                        <h4 *ngIf='info.tvSeries[0]'><strong>Appeared in</strong> :<span *ngFor="let season of info.tvSeries; let first=first; let last=last">{{ season }}{{ last ? '':', '}}</span> </h4>
+                    </div>
+
+                </div>
+                <div class="col-xs-12" style="display: flex;justify-content: center;margin: 10px 0px;">
+                    <a class=" btn btn-default" style="display: inline-block;" (click)="goBackToPreviousPage()">Home</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

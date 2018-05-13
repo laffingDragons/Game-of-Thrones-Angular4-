@@ -1,0 +1,60 @@
+.background2 {
+    background-image: url("../../assets/img/background2.jpg");
+    background-repeat: repeat;
+    /* background-size: 100%; */
+    margin-top: -21px;
+}
+
+.background3 {
+    background-image: url("../../assets/img/background3.jpg");
+    background-repeat: repeat;
+    margin-top: -21px;
+    /* background-size: 100%; */
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    /* height: 220px; */
+    margin: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.houses {
+    /* border-top: 5px solid #ABB7B7; */
+    text-align: center;
+    /* margin: 4%; */
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.houses:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.books {
+    border-top: 5px solid #6B1A28;
+    margin: 4%;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.books:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.chracs {
+    border-top: 5px solid #2C2B33;
+    margin: 4%;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.chracs:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
