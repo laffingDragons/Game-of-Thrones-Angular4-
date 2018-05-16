@@ -49,44 +49,37 @@
     </div>
     <div class="container">
         <div class="row">
-            <!-- for Characters -->
             <div *ngIf="allData.length>0">
                 <div *ngFor="let data of allData | filter :filter | orderBy: key : reverse  | paginate: { itemsPerPage: 30, currentPage: p }; let i = index">
                     <div [routerLink]="['/view',data.url]">
                         <div class="col-sm-6 col-md-6 col-lg-4">
                             <!-- character card starts -->
-                            <div *ngIf="characButton">
-                                <div class="card chracs" style="min-height: 180px" *ngIf="data.gender">
-                                    <img src="./assets/img/characIcon.png" alt="Icon" width="50px" height="50px"><br><br>
-                                    <div *ngIf="data.aliases[0]">Aliases : <span *ngFor="let aliase of data.aliases; let first=first; let last=last">{{ first ? aliase :''}}</span></div>
-                                    <div>
-                                        <h3 *ngIf="data.name">{{ data.name }}</h3>
-                                    </div>
-
+                            <div class="card chracs" style="min-height: 180px" *ngIf="data.gender">
+                                <img src="./assets/img/characIcon.png" alt="Icon" width="50px" height="50px"><br><br>
+                                <div *ngIf="data.aliases[0]">Aliases : <span *ngFor="let aliase of data.aliases; let first=first; let last=last">{{ first ? aliase :''}}</span></div>
+                                <div>
+                                    <h3 *ngIf="data.name">{{ data.name }}</h3>
                                 </div>
+
                             </div>
                             <!-- character card ends -->
 
                             <!-- books card starts -->
-                            <div *ngIf="bookButton">
-                                <div class="card books" style="min-height: 180px" *ngIf="data.isbn">
-                                    <img src="./assets/img/bookIcon.jpg" alt="Icon" width="50px" height="40px"><br><br>
-                                    <div>
-                                        <h3>{{ data.name }}</h3>
-                                    </div>
-
+                            <div class="card books" style="min-height: 180px" *ngIf="data.isbn">
+                                <img src="./assets/img/bookIcon.jpg" alt="Icon" width="50px" height="40px"><br><br>
+                                <div>
+                                    <h3>{{ data.name }}</h3>
                                 </div>
+
                             </div>
                             <!-- books card ends -->
 
                             <!-- house card starts -->
-                            <div *ngIf="houseButton">
-                                <div class="card houses" style="min-height: 180px" *ngIf="data.region">
-                                    <img src="./assets/img/houseIcon.png" alt="Icon" width="40px" height="50px"><br><br>
-                                    <div>
-                                        <h3>{{ data.name }}</h3>
-                                        <p>{{data.region}}</p>
-                                    </div>
+                            <div class="card houses" style="min-height: 180px" *ngIf="data.region">
+                                <img src="./assets/img/houseIcon.png" alt="Icon" width="40px" height="50px"><br><br>
+                                <div>
+                                    <h3>{{ data.name }}</h3>
+                                    <p>{{data.region}}</p>
                                 </div>
                             </div>
                             <!-- house card ends -->
@@ -97,6 +90,6 @@
                 <br/>
             </div>
         </div>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
