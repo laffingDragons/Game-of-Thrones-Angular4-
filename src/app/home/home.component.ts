@@ -29,12 +29,12 @@ export class HomeComponent implements OnInit {
   }
 
   // variables for show and hide
-  public homeButton : boolean = true;
-  public bookButton : boolean = true;
-  public characButton : boolean = true;
-  public houseButton : boolean = true;
-  public view : boolean = false;
-
+   homeButton : boolean = true;
+   bookButton : boolean = true;
+   characButton : boolean = true;
+   houseButton : boolean = true;
+   view : boolean = false;
+  
   // method to show and data
 hide() {
   this.view = true;
@@ -54,7 +54,6 @@ all() {
   this.view = false;
 }
 book() {
-  console.log("book was called");
   this.homeButton = false;
   this.bookButton = true;
   this.characButton = false;
@@ -68,6 +67,8 @@ charac() {
   this.characButton = true;
   this.houseButton = false;
   this.view = false;
+  console.log("charac was called", this.characButton);
+  
 }
 house() {
   console.log("house was called");
