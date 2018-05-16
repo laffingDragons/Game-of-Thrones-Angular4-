@@ -3,28 +3,7 @@
     <img class="img-responsive" src="./assets/img/background.jpg" alt="background" width="100%">
 </div>
 
-<!--- nav bar-->
-<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="390" style="box-shadow: 0 8px 15px 0 gray; margin: 0px;">
-    <div class="container-fluid">
-        <div class="navbar-header" style="cursor: pointer">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-            <a class="navbar-brand" (click)="home()" title="Display Everthing">Game of Thrones</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar" style="cursor: pointer">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a (click)="books()"><strong>Books</strong></a></li>
-                <li><a (click)="characs()"><strong>Characters</strong></a></li>
-                <li><a (click)="houses()"><strong>Houses</strong></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- end of nav--->
-<!-- end of nav-->
+
 <div class="background1">
     <br>
     <router-outlet></router-outlet>

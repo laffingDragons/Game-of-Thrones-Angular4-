@@ -14,12 +14,13 @@ export class HomeComponent implements OnInit {
   allHouses = [];
   allData = [];
   nextComponent = [];
-  p: number = 1;
+
 
   // value for loop:
-  public m: number = 50;
+  public m: number = 20;
   public n: number = 12;
   public o: number =20;
+  p: number = 1;
   // for sorting
   key: string = 'name'; //set default
   reverse: boolean = false;
@@ -29,65 +30,19 @@ export class HomeComponent implements OnInit {
   }
 
   // variables for show and hide
-   homeButton : boolean = true;
-   bookButton : boolean = true;
-   characButton : boolean = true;
-   houseButton : boolean = true;
-   view : boolean = false;
+   homeButton = true;
+   bookButton  = true;
+   characButton  = true;
+   houseButton = true;
+   view  = false;
   
-  // method to show and data
-hide() {
-  this.view = true;
-  this.homeButton = false;
-  this.bookButton = false;
-  this.characButton = false;
-  this.houseButton = false;
-
-}
-all() {
-  console.log("all was called");
   
-  this.homeButton = true;
-  this.bookButton = true;
-  this.characButton = true;
-  this.houseButton = true;
-  this.view = false;
-}
-book() {
-  this.homeButton = false;
-  this.bookButton = true;
-  this.characButton = false;
-  this.houseButton = false;
-  this.view = false;
-}
-charac() {
-  console.log("characx was called");
-  this.homeButton = false;
-  this.bookButton = false;
-  this.characButton = true;
-  this.houseButton = false;
-  this.view = false;
-  console.log("charac was called", this.characButton);
-  
-}
-house() {
-  console.log("house was called");
-  this.homeButton = false;
-  this.bookButton = false;
-  this.characButton = false;
-  this.houseButton = true;
-  this.view = false;
-  console.log("house was called", this.characButton, this.houseButton);
-
-} //end of nav buttons
 
   constructor(public gotService: GotService, private _route:ActivatedRoute, private router:Router) { }
   
   ngOnInit() {
     this.allData = [];
     // fetch all characters from api
-    console.log("value of m", this.m);
-    
     for(var x = 1; x <= this.m; x++){
     this.allCharacs = this.gotService.getAllCharacs(x).subscribe(
       data => {
@@ -126,6 +81,7 @@ house() {
     );
   }
 
+  
 }
 
 
@@ -133,5 +89,42 @@ refresh(){
   this.ngOnInit()
 }
 
+// method to show and data
+hide():void {
+  this.view = true;
+  this.homeButton = false;
+  this.bookButton = false;
+  this.characButton = false;
+  this.houseButton = false;
+}
+all():void {
+  this.homeButton = true;
+  this.bookButton = true;
+  this.characButton = true;
+  this.houseButton = true;
+  this.view = false;
+}
+book() {
+  this.homeButton = false;
+  this.bookButton = true;
+  this.characButton = false;
+  this.houseButton = false;
+  this.view = false;
+}
+charac() {
+  this.homeButton = false;
+  this.bookButton = false;
+  this.characButton = true;
+  this.houseButton = false;
+  this.view = false;
+  
+}
+house() {
+  this.homeButton = false;
+  this.bookButton = false;
+  this.characButton = false;
+  this.houseButton = true;
+  this.view = false;
 
+} //end of nav buttons
 }

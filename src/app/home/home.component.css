@@ -61,6 +61,16 @@
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 } */
 
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.affix+.container-fluid {
+    padding-top: 70px;
+}
+
 .card {
     background: #fff;
     border-radius: 2px;

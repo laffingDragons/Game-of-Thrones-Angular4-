@@ -17,12 +17,10 @@ export class ViewComponent implements OnInit {
   
   ngOnInit() {
     let Url = this._route.snapshot.paramMap.get('url')
-    console.log("myBlogId = ", Url);
 
     this.gotService.getInformation(Url).subscribe(
       data =>{
         this.info = data;
-        console.log(">>>",this.info)
       },
       error =>{
         console.log(error.errorMessage);

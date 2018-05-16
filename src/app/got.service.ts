@@ -24,7 +24,6 @@ export class GotService {
   // fetch Character data
   public getAllCharacs(x):any{
     let myResponse =  this._http.get(`${this.baseUrl}/characters/${x}`);
-    // console.log(">>>",x)
     return myResponse;
   }
 
@@ -46,7 +45,6 @@ export class GotService {
   public getInformation(url):any {
     // for of loop
     let myResponse = this._http.get(`${url}`)
-    console.log("to be set",myResponse)
     return myResponse;
   }//end of get blog
 }
