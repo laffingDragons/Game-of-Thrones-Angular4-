@@ -43,7 +43,6 @@ export class GotService {
 
   // fetch information of particular data
   public getInformation(url):any {
-    // for of loop
     let myResponse = this._http.get(`${url}`)
     return myResponse;
   }//end of get blog

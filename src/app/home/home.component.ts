@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit {
   public n: number = 12;
   public o: number =20;
   p: number = 1;
+
+
   // for sorting
   key: string = 'name'; //set default
   reverse: boolean = false;
@@ -28,14 +30,6 @@ export class HomeComponent implements OnInit {
     this.key = key;
     this.reverse = !this.reverse;
   }
-
-  // variables for show and hide
-   homeButton = true;
-   bookButton  = true;
-   characButton  = true;
-   houseButton = true;
-   view  = false;
-  
   
 
   constructor(public gotService: GotService, private _route:ActivatedRoute, private router:Router) { }
@@ -82,49 +76,11 @@ export class HomeComponent implements OnInit {
   }
 
   
-}
+} //end on init
 
 
 refresh(){
   this.ngOnInit()
 }
 
-// method to show and data
-hide():void {
-  this.view = true;
-  this.homeButton = false;
-  this.bookButton = false;
-  this.characButton = false;
-  this.houseButton = false;
-}
-all():void {
-  this.homeButton = true;
-  this.bookButton = true;
-  this.characButton = true;
-  this.houseButton = true;
-  this.view = false;
-}
-book() {
-  this.homeButton = false;
-  this.bookButton = true;
-  this.characButton = false;
-  this.houseButton = false;
-  this.view = false;
-}
-charac() {
-  this.homeButton = false;
-  this.bookButton = false;
-  this.characButton = true;
-  this.houseButton = false;
-  this.view = false;
-  
-}
-house() {
-  this.homeButton = false;
-  this.bookButton = false;
-  this.characButton = false;
-  this.houseButton = true;
-  this.view = false;
-
-} //end of nav buttons
 }

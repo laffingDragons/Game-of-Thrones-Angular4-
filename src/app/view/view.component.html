@@ -1,14 +1,13 @@
 <div *ngIf='info'>
+    <!-- books if starts here -->
     <div *ngIf='info.isbn' class="background2">
         <div class="container">
             <div class="row">
                 <br><br><br><br>
                 <div class="col-lg-12">
                     <div class="card houses">
-
                         <h1>{{info.name}}</h1>
                         <hr/>
-
                         <div class="bookDiv">
                             <h4 *ngFor="let data of info.authors"><strong>Author</strong> : {{ data }}</h4>
                             <h4><strong>Country</strong> : {{ info.country }}</h4>
@@ -17,17 +16,17 @@
                             <h4><strong>Released on</strong> : {{ info.released | date }}</h4>
                             <h4><strong>Isbn</strong> : {{info.isbn}}</h4>
                         </div>
-
                     </div>
                     <div class="col-xs-12" style="display: flex;justify-content: center;margin: 10px 0px;">
                         <a class=" btn btn-default" style="display: inline-block;" (click)="goBackToPreviousPage()">Home</a>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
+    <!-- books if ends here -->
+
+    <!-- houses if starts here -->
     <div *ngIf='info.region'>
         <div class="container">
             <div class="row">
@@ -59,6 +58,9 @@
             </div>
         </div>
     </div>
+    <!-- houses if ends here -->
+
+    <!-- characs if starts here -->
     <div *ngIf='info.gender' class="background3">
         <div class="container">
             <div class="row">
@@ -91,4 +93,5 @@
             </div>
         </div>
     </div>
+    <!-- characs if ends here -->
 </div>

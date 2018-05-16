@@ -12,12 +12,14 @@ import { GotService } from '../got.service';
 
 export class ViewComponent implements OnInit {
 
-  public info;
+  public info:any;
   constructor(private location: Location, private _route:ActivatedRoute, private router:Router, public gotService: GotService) { }
   
   ngOnInit() {
+    // get the url of particular card
     let Url = this._route.snapshot.paramMap.get('url')
 
+    // Request data from the Url
     this.gotService.getInformation(Url).subscribe(
       data =>{
         this.info = data;
@@ -26,7 +28,9 @@ export class ViewComponent implements OnInit {
         console.log(error.errorMessage);
       },
      )
-  }
+  } //end of service
+
+  // go back
   goBackToPreviousPage(): any {
 
     this.location.back();
