@@ -1,5 +1,25 @@
 <div class="container-fluid" style="text-align:center">
 
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="390" style="box-shadow: 0 8px 15px 0 gray; margin: 0px -14px;">
+        <div class="container-fluid">
+            <div class="navbar-header" style="cursor: pointer">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                      </button>
+                <a class="navbar-brand" (click)="refresh()" title="Display Everthing">Game of Thrones</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" style="cursor: pointer">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a (click)="fetchAllBooks(true)"><strong>Books</strong></a></li>
+                    <li><a (click)="fetchAllCharacs(true)"><strong>Characters</strong></a></li>
+                    <li><a (click)="fetchAllHouses(true)"><strong>Houses</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br><br>
     <div class="row" style="text-align:center" *ngIf="allData.length">
         <div class="col-md-12" style="font-size:22px">
             <h4 class="pull-left" style="color: grey">Search By: </h4><input class="search pull-left" type="text" [(ngModel)]="filter" name="search" placeholder="Name,Alias,House,Region">
