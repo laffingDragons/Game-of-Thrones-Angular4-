@@ -1,65 +1,12 @@
-/* .chracs {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    margin: 4%;
-    padding: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(90, 90, 90, 1);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    font: normal 16px/1 "Times New Roman", Times, serif;
-    color: rgba(255, 255, 255, 1);
-    text-align: center;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    background: #2C2B33;
-    -webkit-box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
 }
 
-.books {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    margin: 4%;
-    padding: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(90, 90, 90, 1);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    font: normal 16px/1 "Times New Roman", Times, serif;
-    color: rgba(255, 255, 255, 1);
-    text-align: center;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    background: #6B1A28;
-    -webkit-box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+.affix+.container-fluid {
+    padding-top: 70px;
 }
-
-.housess {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    margin: 4%;
-    padding: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(90, 90, 90, 1);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    font: normal 16px/1 "Times New Roman", Times, serif;
-    color: rgba(255, 255, 255, 1);
-    text-align: center;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    background: #ABB7B7;
-    -webkit-box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 3px 7px 1px 0 rgba(0, 0, 0, 0.3);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-} */
 
 .card {
     background: #fff;
